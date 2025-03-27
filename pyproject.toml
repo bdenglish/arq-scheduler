@@ -1,0 +1,28 @@
+[project]
+name = "arq-scheduler"
+version = "0.0.1"
+authors = [
+  { name="Benjamin English", email="bdenglish@gmail.com" },
+]
+description = "ARQ Scheduler adds job scheduling capability to ARQ (the Async successor to RQ). Adapted from rq-scheduler"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    'arq',
+    'crontab',
+    'freezegun',
+    'python-dateutil',
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["arq_scheduler*"]
+
+[project.urls]
+Homepage = "https://github.com/bdenglish/arq-scheduler"
+Issues = "https://github.com/bdenglish/arq-scheduler/issues"
