@@ -14,11 +14,12 @@ classifiers = [
 ]
 dependencies = [
     'arq',
+    'click',
     'crontab',
     'freezegun',
     'python-dateutil',
 ]
-
+# optional dependency - sqlalchemy 2.0+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["arq_scheduler*"]
@@ -26,3 +27,6 @@ include = ["arq_scheduler*"]
 [project.urls]
 Homepage = "https://github.com/bdenglish/arq-scheduler"
 Issues = "https://github.com/bdenglish/arq-scheduler/issues"
+
+[project.scripts]
+arq_scheduler = 'arq_scheduler.cli:cli'
